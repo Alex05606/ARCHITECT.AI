@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e6e8e8",
+              "primary": "#00353a",
+              "on-surface-variant": "#40484a",
+              "on-secondary-fixed": "#0e1e20",
+              "surface-container": "#eceeee",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#81bdc4",
+              "surface-variant": "#e1e3e3",
+              "primary-fixed-dim": "#95d0d8",
+              "on-tertiary-container": "#e2a67a",
+              "secondary-container": "#d4e6e8",
+              "on-error-container": "#93000a",
+              "on-tertiary": "#ffffff",
+              "outline": "#70797a",
+              "on-background": "#191c1d",
+              "error": "#ba1a1a",
+              "tertiary": "#4a2504",
+              "on-primary-fixed": "#001f23",
+              "surface-container-low": "#f2f4f4",
+              "secondary-fixed-dim": "#b9cacc",
+              "tertiary-fixed-dim": "#f8b98c",
+              "on-tertiary-fixed-variant": "#673d19",
+              "secondary-fixed": "#d4e6e8",
+              "on-secondary-fixed-variant": "#3a494b",
+              "background": "#f8fafa",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#2f1400",
+              "on-surface": "#191c1d",
+              "inverse-primary": "#95d0d8",
+              "primary-fixed": "#b0edf5",
+              "on-secondary-container": "#576769",
+              "surface-dim": "#d8dada",
+              "on-error": "#ffffff",
+              "primary-container": "#004d54",
+              "tertiary-container": "#653b18",
+              "surface-tint": "#29676e",
+              "error-container": "#ffdad6",
+              "surface": "#f8fafa",
+              "outline-variant": "#bfc8c9",
+              "on-primary-fixed-variant": "#034f56",
+              "inverse-surface": "#2e3131",
+              "surface-bright": "#f8fafa",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#eff1f1",
+              "surface-container-highest": "#e1e3e3",
+              "secondary": "#516163",
+              "tertiary-fixed": "#ffdcc4"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface selection:bg-primary/10">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/40 dark:bg-slate-950/40 backdrop-blur-xl">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#00353a] text-2xl" data-icon="architecture">architecture</span>
+<span class="text-xl font-black tracking-tighter text-[#00353a] dark:text-[#f8fafa]">ARCHITECT.AI</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-manrope font-bold tracking-tight text-[#00353a] dark:text-[#f8fafa] border-b-2 border-[#00353a]" href="#">Home</a>
+<a class="text-sm font-manrope font-bold tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#004d54] transition-colors" href="#">Manual Editor</a>
+<a class="text-sm font-manrope font-bold tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#004d54] transition-colors" href="#">AI Styles</a>
+<a class="text-sm font-manrope font-bold tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#004d54] transition-colors" href="#">Explore</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all duration-200">
+                Get Started
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="grid lg:grid-cols-2 gap-24 items-center">
+<div class="space-y-12">
+<div class="inline-flex items-center gap-2 bg-secondary-container px-4 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold tracking-widest text-on-secondary-container uppercase">The Future of Living</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black tracking-tight leading-[0.95] text-primary">
+                        Architecture Precision <br/>
+<span class="text-on-primary-container">Powered by AI</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed font-body">
+                        Bridge the gap between vision and reality. Our AI generates structural blueprints with aesthetic perfection and engineering rigor.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
+                            Start Designing
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container text-primary px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all">
+                            View Showcase
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-surface-container-low relative group">
+<img alt="Modern Architectural House" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Ultra modern glass and concrete villa facade at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6g9_VYXuJVo23vDgud1nqxW4yNL2lV4hU4Hg--p6n0S7IsXY31_2GrOoI_VWny-ApiSiK1xL6omfeLxsDKcLceFv0op_JHERcFFU6bGciq2UjK0mDy2qcQr5Qrn0vPTNg0XGTvK6M2kPuKFksY3QdKAV4G7Wkvnsku7lIRTYT9VBmynGryx4NF765BsrL36DTFRFXrSvcSXAkOsB5V3S7jLUBOPb3g0HEN9Ia4_lzJzNWjPkGgsxH2856kcZPnEqQ1RTE7GMww"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8 right-8 p-6 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/20">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-xs font-bold text-white/80 uppercase tracking-widest mb-1">Current Concept</p>
+<h3 class="text-2xl font-bold text-white">The Zenith Pavilion</h3>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-white/60 uppercase tracking-widest">Confidence Score</p>
+<p class="text-xl font-bold text-white">99.8%</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-tertiary-fixed/30 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-bold tracking-tight text-primary mb-4">Design Without Limits</h2>
+<p class="text-on-surface-variant max-w-xl">Every tool you need to manifest high-end residential spaces from a single prompt or a manual stroke.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Manual Editor -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-[2rem] flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-on-primary mb-8 transition-transform group-hover:rotate-12">
+<span class="material-symbols-outlined text-3xl" data-icon="edit_square">edit_square</span>
+</div>
+<h3 class="text-3xl font-bold text-primary mb-4">Manual Editor</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">
+                            Take full control of every coordinate. Our precision CAD-style editor allows you to override AI suggestions with millimeter accuracy.
+                        </p>
+</div>
+<div class="mt-12 flex items-center gap-4">
+<span class="px-4 py-2 bg-surface-container rounded-lg text-xs font-bold text-primary">CAD Integration</span>
+<span class="px-4 py-2 bg-surface-container rounded-lg text-xs font-bold text-primary">BIM Export</span>
+</div>
+</div>
+<!-- AI Styles -->
+<div class="bg-primary text-on-primary p-10 rounded-[2rem] flex flex-col justify-between relative overflow-hidden group">
+<div class="relative z-10">
+<div class="w-14 h-14 bg-on-primary/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">AI Styles</h3>
+<p class="text-on-primary-container text-lg leading-relaxed">
+                            Apply curated aesthetic directions like Japandi, Brutalism, or Bauhaus in a single click.
+                        </p>
+</div>
+<div class="absolute bottom-0 right-0 w-32 h-32 bg-white/5 -mb-8 -mr-8 rounded-full"></div>
+</div>
+<!-- Category Explore -->
+<div class="bg-tertiary-fixed text-on-tertiary-fixed p-10 rounded-[2rem] flex flex-col group">
+<div class="w-14 h-14 bg-on-tertiary-fixed/10 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-3xl" data-icon="explore">explore</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">Explore</h3>
+<p class="text-on-tertiary-fixed-variant text-lg leading-relaxed mb-8">
+                        Browse 10,000+ AI-generated community blueprints for inspiration.
+                    </p>
+<div class="mt-auto aspect-video rounded-xl bg-white/40 overflow-hidden relative">
+<img alt="Commercial building" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="A clean grid of architectural library photos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA69XfCz2TZkcPU1W2p4LCdAywMSZnQkA8Nv4nC9dtLKNIRetf2bi0QxRiBs3iKDOSYjsn3KUKTaHRQHPdnNi5G_B_rnwgpGRDkOSZaSaf5ZogVQ8bywMhdTO1K9yIR1q_LgRYx5GlrLuciEjNYdYMcuGVFYsc1qsHfGFuEGmfD1RTPOZqE2Xo_Fbr6G0nnaLkq7W6IKxbVvi-YYWhPX0LsorHgj4dNQ8OYTlc0FCy1_mjQcy0AiJo-G3xPe1R0hXM0FUiGiVbRlQ"/>
+</div>
+</div>
+<!-- Architectural Integrity Section -->
+<div class="md:col-span-2 bg-surface-container p-10 rounded-[2rem] flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1">
+<h3 class="text-3xl font-bold text-primary mb-6">Architectural Integrity</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="cyclone">cyclone</span>
+<div>
+<h4 class="font-bold text-primary">Wind-Load Analysis</h4>
+<p class="text-sm text-on-surface-variant">Real-time simulation of structural stress based on local weather data.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="wb_sunny">wb_sunny</span>
+<div>
+<h4 class="font-bold text-primary">Solar Pathing</h4>
+<p class="text-sm text-on-surface-variant">Optimization of window placement for 40% higher energy efficiency.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+<div>
+<h4 class="font-bold text-primary">Material Cost Tracking</h4>
+<p class="text-sm text-on-surface-variant">Live estimation of construction costs using regional market rates.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 aspect-square bg-surface-container-highest rounded-2xl flex items-center justify-center border border-outline-variant/20 p-8">
+<div class="w-full h-full border-2 border-dashed border-primary/20 rounded-full flex items-center justify-center relative">
+<div class="w-3/4 h-3/4 border-2 border-primary/40 rounded-full animate-[spin_10s_linear_infinite]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-4xl font-black text-primary">AI</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Showcase Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="text-5xl font-extrabold tracking-tight text-primary mb-4">Precision Gallery</h2>
+<p class="text-on-surface-variant text-lg">Witness the results of AI-driven structural engineering.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                        Explore Full Library 
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">east</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Image 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="Modern Villa" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Luxury cliffside villa with infinity pool and geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPYic15Pufv_hjjdYVQ7mQEQCaAHtu0iMGeFmfO81izMG41vsEtb1JWg33oprkxdMW8RVPJE_Ygt4ZxMJtm_gCvXE1YF-3hM10MgDNbZuM7pR5oAVQBJzbm8W7PzevWGErSMvIgIQ7bhjWumYCRx5K4E0wd59TRC97jkDT3EgLTlu2VyQHyeoISGGqTfSwWNpoteGnuEzye8PwJhloFV0PbMVAF6vmltHzFnDfhEqL3oW2btaTnThqE03w34_sY2yS-0M5DKMT9Q"/>
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-md text-white px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase">Contemporary</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-primary">Obsidian Residence</h4>
+<p class="text-xs text-on-surface-variant">Malibu, California</p>
+</div>
+</div>
+<!-- Image 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="Minimalist Living Room" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Minimalist interior with tall concrete ceilings and oak furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0t4mfODK_zmji7grb2jb-P1AVbbCuKgqxhpjytP32BDE45rfxQyEwp-VGqYLh90835wEGGITtV9o1xeZ7yANby9yMP-KHP83KGoj80v1DNcmabLj7OE_3wnDr8f2iuYEVXHZC66QOtpFAjyfBM19cyePtHL6eAffTs0Maa-Q_uU4pxbLRMqNm_q-iXpugvyfraPVg-tQ9rLIoy3Dd-14Vs1mrkQbg-9MiND1mKIh7DN-0cZeZUN5HgpzVpP6WlUqefyV8Zdt14Q"/>
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-md text-white px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase">Minimalist</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-primary">Concrete Canvas</h4>
+<p class="text-xs text-on-surface-variant">Tokyo, Japan</p>
+</div>
+</div>
+<!-- Image 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="Smart Home" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Smart suburban home with sustainable solar roof tiles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfS2UMcAR9PZRXukpAV3i8D03-31ph9kSkxfZpXBhnVG66EmCXw4gQltSJygEoF5LCLmnQdy3JRx-es2S5tdQqWwHYpDl3uSU5HHoL7CtfEpIx3s9XjNd7BYWISPCMdQ6ACtvs616OrjVOT18JircpHs8p3QzZ_F6vv3oLumlbFsjSaKtKjsGhXYZ2mfMr225Tc3qxLgA1cpfrCd328X1Apv9U0TjZzHa9fwzfI7cJAhuualIiWnM3LtScMlKet-PIroTJ1-P3vw"/>
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-md text-white px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase">Brutalism</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-primary">Steel &amp; Ether</h4>
+<p class="text-xs text-on-surface-variant">Berlin, Germany</p>
+</div>
+</div>
+<!-- Image 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="Eco friendly cabin" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Modern eco-cabin nestled in a dense pine forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4vkrd-VW9JppNd8nDPORToi4IDLVt45HOcQhHOIFZamYrRW2z9U8rAnDRbyXKtIFf-jbu19Z10S6_gIPaL6welmFMjxGPi-juDg_FrUyQyNgbz2y3i2FPQtMnS_GJ5c2p-6sqGb8lVdHyveMZ0LoSsJxmPiNI04P5rnI9sz-CDreVGENAYwbQmqCk5hj4PmlgWzGmGuVNkPUJzgauLsR9KEPKIKgy10Cyu4BcSGLCgW9Io0x9iRz7QTspL4xCSyfjXePY0TFRgQ"/>
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-md text-white px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase">Organic</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-primary">Pine Retreat</h4>
+<p class="text-xs text-on-surface-variant">Oslo, Norway</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-8">
+<div class="max-w-5xl mx-auto bg-primary rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary-container/40 to-transparent"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-6xl font-black text-on-primary mb-8 tracking-tighter">
+                        Build the future <br/> with intelligence.
+                    </h2>
+<p class="text-on-primary-container text-lg md:text-xl max-w-2xl mx-auto mb-12">
+                        Join 2,500+ architects using AI to push the boundaries of modern living. No credit card required to start your first concept.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-on-primary text-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-secondary-container transition-all">
+                            Start Designing Now
+                        </button>
+<button class="border-2 border-on-primary/20 text-on-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">
+                            Contact Sales
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f2f4f4] dark:bg-slate-900 w-full py-16 px-8 border-t border-slate-200/10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-[#00353a]" data-icon="architecture">architecture</span>
+<span class="text-lg font-bold text-[#00353a]">ARCHITECT.AI</span>
+</div>
+<p class="font-inter text-sm tracking-wide text-slate-500 max-w-xs">
+                    © 2024 Architect AI. Precision in every pixel. Elevating human creativity through artificial intelligence.
+                </p>
+</div>
+<div>
+<h4 class="font-manrope font-bold text-[#00353a] dark:text-[#d4e6e8] mb-6">Product</h4>
+<ul class="space-y-4 font-inter text-sm tracking-wide text-slate-500">
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Manual Editor</a></li>
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">AI Styles</a></li>
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Pricing</a></li>
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">API Docs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-manrope font-bold text-[#00353a] dark:text-[#d4e6e8] mb-6">Resources</h4>
+<ul class="space-y-4 font-inter text-sm tracking-wide text-slate-500">
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Explore</a></li>
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Community</a></li>
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Case Studies</a></li>
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-manrope font-bold text-[#00353a] dark:text-[#d4e6e8] mb-6">Legal</h4>
+<ul class="space-y-4 font-inter text-sm tracking-wide text-slate-500">
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Privacy</a></li>
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Terms</a></li>
+<li><a class="hover:text-[#00353a] hover:translate-x-1 transition-all duration-300 block" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

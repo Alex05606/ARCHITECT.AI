@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#00353a",
+        background: "#f8fafa",
+        surface: "#ffffff",
+        secondary: "#516163"
+      },
+      fontFamily: {
+        headline: ["Manrope"],
+        body: ["Inter"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1,h2,h3 { font-family: 'Manrope', sans-serif; }
+</style>
+
+</head>
+
+<body class="bg-background text-black">
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 bg-white/40 backdrop-blur-xl">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">architecture</span>
+<span class="text-xl font-bold text-primary">ARCHITECT.AI</span>
+</div>
+
+<div class="hidden md:flex items-center gap-8 font-bold">
+<a href="landing.html">Home</a>
+<a href="canvas.html">Manual Editor</a>
+<a href="ai.html">AI Styles</a>
+<a href="explore.html">Explore</a>
+</div>
+
+<button onclick="window.location.href='login.html'"
+class="bg-primary text-white px-6 py-2 rounded-lg">
+Get Started
+</button>
+
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+
+<div>
+<h1 class="text-6xl font-bold text-primary mb-6">
+Architecture Powered by AI
+</h1>
+
+<p class="text-gray-600 mb-8 text-lg">
+Design your dream home with AI or manual tools.
+</p>
+
+<div class="flex gap-4">
+<button onclick="window.location.href='login.html'"
+class="bg-primary text-white px-6 py-3 rounded-lg">
+Start Designing
+</button>
+
+<button onclick="window.location.href='explore.html'"
+class="bg-gray-200 px-6 py-3 rounded-lg">
+View Showcase
+</button>
+</div>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+class="rounded-xl shadow-lg">
+</div>
+
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-20 bg-gray-100 px-8">
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="font-bold text-xl mb-2">Manual Editor</h3>
+<p>Edit your house design manually with precision.</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="font-bold text-xl mb-2">AI Styles</h3>
+<p>Apply AI-generated modern styles instantly.</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="font-bold text-xl mb-2">Explore</h3>
+<p>Browse designs created by others.</p>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white py-10 text-center">
+<p class="text-gray-500">© 2026 Architect AI</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Architect AI - Design Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#f8b98c",
+              "surface-bright": "#f8fafa",
+              "surface-container-high": "#e6e8e8",
+              "surface-dim": "#d8dada",
+              "on-primary-fixed-variant": "#034f56",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#001f23",
+              "tertiary": "#4a2504",
+              "secondary-fixed-dim": "#b9cacc",
+              "on-primary-container": "#81bdc4",
+              "inverse-on-surface": "#eff1f1",
+              "tertiary-fixed": "#ffdcc4",
+              "secondary-fixed": "#d4e6e8",
+              "surface-container": "#eceeee",
+              "primary": "#00353a",
+              "on-secondary-container": "#576769",
+              "surface-variant": "#e1e3e3",
+              "on-secondary-fixed": "#0e1e20",
+              "error": "#ba1a1a",
+              "on-background": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "on-surface": "#191c1d",
+              "outline-variant": "#bfc8c9",
+              "on-surface-variant": "#40484a",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#3a494b",
+              "primary-fixed": "#b0edf5",
+              "surface-container-low": "#f2f4f4",
+              "surface": "#f8fafa",
+              "primary-fixed-dim": "#95d0d8",
+              "on-tertiary-fixed-variant": "#673d19",
+              "primary-container": "#004d54",
+              "surface-tint": "#29676e",
+              "on-tertiary-fixed": "#2f1400",
+              "surface-container-highest": "#e1e3e3",
+              "background": "#f8fafa",
+              "secondary": "#516163",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#95d0d8",
+              "outline": "#70797a",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#e2a67a",
+              "inverse-surface": "#2e3131",
+              "tertiary-container": "#653b18",
+              "secondary-container": "#d4e6e8",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .canvas-pattern {
+        background-color: #f2f4f4;
+        background-image: radial-gradient(#bfc8c9 0.5px, transparent 0.5px);
+        background-size: 24px 24px;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<div class="flex h-screen overflow-hidden">
+<!-- NavigationDrawer (Shared Component) -->
+<aside class="hidden md:flex flex-col h-full sticky left-0 bg-[#f2f4f4] dark:bg-[#191c1d] text-[#00353a] dark:text-[#d4e6e8] h-screen w-72 rounded-r-2xl">
+<div class="p-6 flex flex-col gap-8 h-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div class="flex flex-col">
+<span class="font-manrope font-black text-[#00353a] leading-tight">Alex Design</span>
+<span class="text-[10px] font-manrope font-medium text-[#5c6061] uppercase tracking-wider">Pro Plan</span>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="text-[#5c6061] dark:text-[#bfc8c9] px-4 py-3 hover:bg-[#bfc8c9]/20 transition-all font-manrope font-medium text-sm flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">home</span> Home
+                    </a>
+<a class="bg-[#00353a] text-white rounded-xl mx-2 shadow-sm px-4 py-3 font-manrope font-medium text-sm flex items-center gap-3 scale-100 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">architecture</span> Projects
+                    </a>
+<a class="text-[#5c6061] dark:text-[#bfc8c9] px-4 py-3 hover:bg-[#bfc8c9]/20 transition-all font-manrope font-medium text-sm flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">auto_awesome</span> AI Assistant
+                    </a>
+<a class="text-[#5c6061] dark:text-[#bfc8c9] px-4 py-3 hover:bg-[#bfc8c9]/20 transition-all font-manrope font-medium text-sm flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">explore</span> Explore
+                    </a>
+<a class="text-[#5c6061] dark:text-[#bfc8c9] px-4 py-3 hover:bg-[#bfc8c9]/20 transition-all font-manrope font-medium text-sm flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">person</span> Profile
+                    </a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<div class="p-4 bg-surface rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">cloud_done</span>
+<div class="flex flex-col">
+<span class="text-xs font-bold">Auto-sync active</span>
+<span class="text-[10px] text-on-surface-variant">Last saved: 2m ago</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col min-w-0 relative">
+<!-- TopAppBar (Shared Component) -->
+<header class="w-full top-0 px-6 py-4 bg-[#f8fafa] dark:bg-[#191c1d] flex justify-between items-center w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="md:hidden p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-manrope font-extrabold text-[#00353a] dark:text-[#f8fafa] tracking-tighter text-2xl">Modern Architect AI</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-full text-[#5c6061] text-xs font-semibold">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                        LIVE SESSION
+                    </div>
+<button class="p-2 rounded-full hover:bg-[#f2f4f4] dark:hover:bg-[#222627] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#00353a] dark:text-[#d4e6e8]">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden border-2 border-surface">
+<img class="w-full h-full object-cover" data-alt="Architect professional user profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASIVCT8NyRZdoAL7eHMFh1z_KB2FEixz7pWgLR5u1BzQLFQV4gkOTP60e7oxsBzPUaSaHPXohpg6kd4M8K21oYCMbYttMm3GTs8XNRN68YVEHEYvo6UKjQHtnHoTuSvjLMVnLaLFna6hecEK5TF7iFrhLv3DGGa6c5MNV0EEdqk31ziaF0m-_Wz3_Al_Ee-Tq0CwlkWOTkTewEZ6JyXegXAQ0odZCN1xmf-eQ1ozj1D8Dc-7JoPRnamn5g8IWwy1kwTXVJw9h98Q"/>
+</div>
+</div>
+</header>
+<!-- Main Canvas Area -->
+<section class="flex-1 relative overflow-hidden flex bg-surface">
+<!-- Tools Sidebar (Internal Studio Tool) -->
+<div class="hidden lg:flex flex-col gap-4 p-4 z-10">
+<div class="flex flex-col gap-2 p-2 bg-white/60 backdrop-blur-md rounded-2xl shadow-sm border border-outline-variant/10">
+<button class="p-3 bg-primary text-white rounded-xl shadow-lg transition-transform active:scale-90">
+<span class="material-symbols-outlined">near_me</span>
+</button>
+<button class="p-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all">
+<span class="material-symbols-outlined">format_paint</span>
+</button>
+<button class="p-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all">
+<span class="material-symbols-outlined">texture</span>
+</button>
+<button class="p-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all">
+<span class="material-symbols-outlined">window</span>
+</button>
+<button class="p-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all">
+<span class="material-symbols-outlined">door_front</span>
+</button>
+<div class="h-px bg-outline-variant/20 mx-2 my-1"></div>
+<button class="p-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all">
+<span class="material-symbols-outlined">undo</span>
+</button>
+<button class="p-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all">
+<span class="material-symbols-outlined">redo</span>
+</button>
+</div>
+</div>
+<!-- Canvas -->
+<div class="flex-1 relative canvas-pattern flex items-center justify-center p-8 overflow-auto">
+<!-- The Design Image -->
+<div class="relative group max-w-5xl w-full aspect-[16/10] bg-white rounded-[2rem] shadow-2xl overflow-hidden transform hover:scale-[1.01] transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="Modern house architecture with large glass windows and clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsMvjOqlRB1WZePeY0YNB5ksfdD4FGHiI1LlD3ZzFvMiAZLwBRMDGQ6alYi3k3fAiJivWlUJa5l6GV_IMPii9IuNfbLB8DZb1fFt7xJQXhRXkJjMI9edXQBPGOM28wAXinHHfOy546yVMk_avC0v1AN5l7bL6kF61K04LgGGbGVXsJs0NAF9k1-HmsSeb5fVx2qXi2Dh2viHRzcTXkh4YTT2RMhYjFQcZf2no6V1NhpOgggPLJByvX2U8vSE-O6SJVLnSkDhcQ9g"/>
+<!-- AI Analysis Overlay (Invisible until hover or prompt) -->
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+<div class="flex flex-col items-center gap-4">
+<div class="bg-white/90 backdrop-blur px-4 py-2 rounded-full border border-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">auto_awesome</span>
+<span class="text-xs font-bold text-primary">Surface Selected: Front Facade</span>
+</div>
+</div>
+</div>
+<!-- Canvas Indicators -->
+<div class="absolute top-6 left-6 flex gap-2">
+<div class="bg-black/50 backdrop-blur-md text-white px-3 py-1 rounded-lg text-xs font-medium border border-white/10">3D View</div>
+<div class="bg-black/50 backdrop-blur-md text-white px-3 py-1 rounded-lg text-xs font-medium border border-white/10">Facade A</div>
+</div>
+</div>
+<!-- Bottom Contextual Toolbar -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 p-3 bg-white/80 backdrop-blur-xl rounded-[2.5rem] shadow-xl border border-outline-variant/20 max-w-[90vw] overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-1 px-4 border-r border-outline-variant/30">
+<span class="text-[10px] font-bold text-on-surface-variant tracking-tighter uppercase mr-2">Paint</span>
+<div class="w-6 h-6 rounded-full bg-[#E5D3B3] ring-2 ring-primary ring-offset-2 cursor-pointer"></div>
+<div class="w-6 h-6 rounded-full bg-[#FFFFFF] ring-1 ring-outline-variant cursor-pointer"></div>
+<div class="w-6 h-6 rounded-full bg-[#4A4A4A] ring-1 ring-outline-variant cursor-pointer"></div>
+<div class="w-6 h-6 rounded-full bg-primary ring-1 ring-outline-variant cursor-pointer"></div>
+</div>
+<div class="flex items-center gap-3 px-4">
+<span class="text-[10px] font-bold text-on-surface-variant tracking-tighter uppercase mr-2">Materials</span>
+<button class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">texture</span>
+                                Concrete
+                            </button>
+<button class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">nature</span>
+                                Cedar Wood
+                            </button>
+</div>
+</div>
+</div>
+<!-- AI Assistant Sidebar -->
+<div class="hidden xl:flex w-96 flex-col border-l border-outline-variant/10 bg-white p-6 gap-6 overflow-y-auto">
+<div class="flex items-center justify-between">
+<h3 class="font-manrope font-bold text-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+                            AI Assistant
+                        </h3>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-4 border-l-4 border-primary">
+<p class="text-sm text-on-surface-variant italic">"I've analyzed the current design. The natural light on the west wing could be optimized by extending the floor-to-ceiling windows. Would you like to see a preview?"</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant/60">Suggestions</h4>
+<div class="grid grid-cols-1 gap-3">
+<button class="flex items-center gap-3 p-3 rounded-xl border border-outline-variant/20 hover:bg-primary/5 transition-colors text-left group">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">wb_sunny</span>
+</div>
+<div>
+<p class="text-xs font-bold">Optimize Skylights</p>
+<p class="text-[10px] text-on-surface-variant">Better thermal regulation</p>
+</div>
+<span class="material-symbols-outlined ml-auto opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</button>
+<button class="flex items-center gap-3 p-3 rounded-xl border border-outline-variant/20 hover:bg-primary/5 transition-colors text-left group">
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">energy_savings_leaf</span>
+</div>
+<div>
+<p class="text-xs font-bold">Solar Facade Integration</p>
+<p class="text-[10px] text-on-surface-variant">Generate 40% more energy</p>
+</div>
+<span class="material-symbols-outlined ml-auto opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="mt-auto">
+<div class="relative">
+<textarea class="w-full bg-surface-container-highest border-none rounded-2xl p-4 text-sm focus:ring-2 focus:ring-primary h-32 resize-none font-body" placeholder="Ask AI to change textures, colors or add elements..."></textarea>
+<button class="absolute bottom-3 right-3 p-2 bg-primary text-white rounded-xl shadow-lg">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component - Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-safe px-4 bg-white/40 dark:bg-[#191c1d]/40 backdrop-blur-xl rounded-t-[2rem] border-t-[0.5px] border-[#bfc8c9]/15 shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center text-[#5c6061] dark:text-[#bfc8c9] p-3">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#00353a] text-white rounded-2xl p-3 mb-2 scale-110">
+<span class="material-symbols-outlined">architecture</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Projects</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#5c6061] dark:text-[#bfc8c9] p-3">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">AI</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#5c6061] dark:text-[#bfc8c9] p-3">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#5c6061] dark:text-[#bfc8c9] p-3">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</div>
+</body></html>

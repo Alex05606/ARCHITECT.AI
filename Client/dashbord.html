@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Architect AI - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#f8b98c",
+              "surface-bright": "#f8fafa",
+              "surface-container-high": "#e6e8e8",
+              "surface-dim": "#d8dada",
+              "on-primary-fixed-variant": "#034f56",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#001f23",
+              "tertiary": "#4a2504",
+              "secondary-fixed-dim": "#b9cacc",
+              "on-primary-container": "#81bdc4",
+              "inverse-on-surface": "#eff1f1",
+              "tertiary-fixed": "#ffdcc4",
+              "secondary-fixed": "#d4e6e8",
+              "surface-container": "#eceeee",
+              "primary": "#00353a",
+              "on-secondary-container": "#576769",
+              "surface-variant": "#e1e3e3",
+              "on-secondary-fixed": "#0e1e20",
+              "error": "#ba1a1a",
+              "on-background": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "on-surface": "#191c1d",
+              "outline-variant": "#bfc8c9",
+              "on-surface-variant": "#40484a",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#3a494b",
+              "primary-fixed": "#b0edf5",
+              "surface-container-low": "#f2f4f4",
+              "surface": "#f8fafa",
+              "primary-fixed-dim": "#95d0d8",
+              "on-tertiary-fixed-variant": "#673d19",
+              "primary-container": "#004d54",
+              "surface-tint": "#29676e",
+              "on-tertiary-fixed": "#2f1400",
+              "surface-container-highest": "#e1e3e3",
+              "background": "#f8fafa",
+              "secondary": "#516163",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#95d0d8",
+              "outline": "#70797a",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#e2a67a",
+              "inverse-surface": "#2e3131",
+              "tertiary-container": "#653b18",
+              "secondary-container": "#d4e6e8",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface flex min-h-screen">
+<!-- NavigationDrawer (Shared Component) -->
+<aside class="hidden md:flex flex-col h-full sticky left-0 bg-[#f2f4f4] dark:bg-[#191c1d] h-screen w-72 rounded-r-2xl z-40">
+<div class="px-6 py-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<span class="font-manrope font-black text-[#00353a] text-xl">Architect AI</span>
+</div>
+<div class="px-4 mb-8">
+<div class="flex items-center gap-4 p-4 bg-surface-container rounded-2xl">
+<img alt="Alex Design" class="w-10 h-10 rounded-full object-cover" data-alt="Professional architect profile headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf6HwiYrdW434qGP71qiwCYcXErSjZnaFBZJiZwkt4YnbTSACKq9Ryw2O1RaBxV-TDxjzFeusW8KxHMespS1xIim8dHI_XUkE-SpnNBg_JdkTPSmL2if3qi9t-bXtqbBQSd8gUdbE493hsoAYSgjO1PbuhNBYGl-xL4e4CyH-oa7DMo4jRc-OrmBDbaS0FZOfiO2OTbUBy1HjpXLGTNUJhV1hjpVXZWgkdK497DAMZilXyj5K1rHzhurHh1X4MezVNxw-QRZENrg"/>
+<div>
+<p class="font-manrope font-medium text-sm text-[#00353a] dark:text-[#d4e6e8]">Alex Design</p>
+<p class="text-[10px] uppercase tracking-widest text-[#5c6061]">Pro Plan</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="bg-[#00353a] text-white rounded-xl mx-2 shadow-sm px-4 py-3 flex items-center gap-4 font-manrope font-medium text-sm scale-100 active:scale-[0.98] transition-all" href="landing.html">
+<span class="material-symbols-outlined">home</span>
+                Home
+            </a>
+<a class="text-[#5c6061] dark:text-[#bfc8c9] px-4 py-3 mx-2 flex items-center gap-4 font-manrope font-medium text-sm hover:bg-[#bfc8c9]/20 transition-all" href="canvas.html"">
+<span class="material-symbols-outlined">architecture</span>
+                Projects
+            </a>
+<a class="text-[#5c6061] dark:text-[#bfc8c9] px-4 py-3 mx-2 flex items-center gap-4 font-manrope font-medium text-sm hover:bg-[#bfc8c9]/20 transition-all" href="ai.html">
+<span class="material-symbols-outlined">auto_awesome</span>
+                AI Assistant
+            </a>
+<a class="text-[#5c6061] dark:text-[#bfc8c9] px-4 py-3 mx-2 flex items-center gap-4 font-manrope font-medium text-sm hover:bg-[#bfc8c9]/20 transition-all" href="explore.html">
+<span class="material-symbols-outlined">explore</span>
+                Explore
+            </a>
+<a class="text-[#5c6061] dark:text-[#bfc8c9] px-4 py-3 mx-2 flex items-center gap-4 font-manrope font-medium text-sm hover:bg-[#bfc8c9]/20 transition-all" href="profile.html">
+<span class="material-symbols-outlined">person</span>
+                Profile
+            </a>
+</nav>
+</aside>
+<main class="flex-1 min-w-0 overflow-auto pb-24 md:pb-8">
+<!-- TopAppBar (Shared Component) -->
+<header class="bg-[#f8fafa] dark:bg-[#191c1d] w-full top-0 px-6 py-4 flex justify-between items-center w-full max-w-screen-2xl mx-auto z-30">
+<h1 class="font-manrope font-extrabold text-[#00353a] dark:text-[#f8fafa] tracking-tighter text-2xl">Modern Architect AI</h1>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#f2f4f4] dark:hover:bg-[#222627] transition-colors text-[#5c6061]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-[#f2f4f4] dark:hover:bg-[#222627] transition-colors text-[#5c6061]">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden md:hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="User profile photo avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc3z35skqxDG6Og6BIlUP15wuK2j05YE1AP640mn_Z3SlmBX3eqSqQxHJLzpgwdyCpudBCzJAg1cwvhQ6AUt_PcrwWsDbDfPHseYY62UpcATdOKyk-TVCUAL1XWIZAbapmA_5Dg8Rfql-9BRwvGIigZdUc04XZgK6-72d_nK7O-MJoUM6DcTwnmDeZQjR7CaM0GYnHBaM96tS0PDJ9jDt4rBv9lKcMVghWl6QzYEE72zm-WjyCM92tNyiNtJWSjImzDHNPHRmyiA"/>
+</div>
+</div>
+</header>
+<div class="max-w-screen-2xl mx-auto px-6 py-8">
+<!-- Welcome Header -->
+<section class="mb-12">
+<h2 class="font-manrope font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-2">Welcome back, Alex!</h2>
+<p class="text-on-surface-variant font-body text-lg">Your creative workspace is ready. What are we designing today?</p>
+</section>
+<!-- Bento Grid Main Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Quick Actions / Upload (Bento Large) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-[2rem] p-8 relative overflow-hidden group">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<span class="inline-block px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold uppercase tracking-widest mb-4">Start New</span>
+<h3 class="font-manrope font-bold text-3xl text-primary mb-4 max-w-md">Transform your floor plans into cinematic renders instantly.</h3>
+</div>
+<div class="flex flex-wrap gap-4 mt-8">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-3 active:scale-95 transition-all shadow-lg">
+<span class="material-symbols-outlined">cloud_upload</span>
+                                New Project
+                            </button>
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-bold flex items-center gap-3 active:scale-95 transition-all">
+<span class="material-symbols-outlined">auto_awesome</span>
+                                AI Mode
+                            </button>
+</div>
+</div>
+<!-- Aesthetic Background Detail -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="absolute right-12 top-12 opacity-10">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'wght' 100;">architecture</span>
+</div>
+</div>
+<!-- Manual Mode / Technical (Bento Small) -->
+<div class="md:col-span-4 bg-surface-container-high rounded-[2rem] p-8 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined">edit_square</span>
+</div>
+<h4 class="font-manrope font-bold text-xl text-primary mb-2">Manual Mode</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Precision drafting tools for detailed architectural planning and structural layouts.</p>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-2 group mt-6" href="#">
+                        Launch Editor
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Recent Projects List -->
+<div class="md:col-span-12 mt-8">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-manrope font-bold text-2xl text-primary">Recent Projects</h3>
+<button class="text-primary font-semibold text-sm hover:underline">View all projects</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Project Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden group cursor-pointer transition-transform hover:-translate-y-1">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Modern Villa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern minimalist villa render with pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfOcfopT6cCz9EahC0je0LGiw5NFV0AzmanH1FA6AmDkqEukxrZpd1SlgboUTs9r9JAzzI1jULz3wPejbmcYOR0fntKKXkTfNlGmkPVK09fv-FWr-eHgfgCnS0AKt9MQLAQaTKfhQ1BcTwN2l0zarBlpHrffAK2FYr9e_CmKuNBbxbWGTGvlDsUDoEe-SPOU2YcYUA8ktjOYv8N--bBp22tWwKVHB0u9wKRU9Day1L8T13HFGcHu7JRyNSakuPMPRotbWjG-kCEQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white text-xs font-medium bg-white/20 backdrop-blur-md px-3 py-1 rounded-full">Modified 2h ago</span>
+</div>
+</div>
+<div class="p-5">
+<h5 class="font-manrope font-bold text-primary mb-1">Oceanview Minimalist</h5>
+<p class="text-xs text-on-surface-variant">Residential • 4,200 sq ft</p>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden group cursor-pointer transition-transform hover:-translate-y-1">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Loft Apartment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Industrial loft interior design visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDPWLY8gEyBGZd-khc3aaALTWk2rO2x5j1sA5NUWNl4o-3p-n8Z8mm5N3PkpZ9U34dTS_hnozkJyCUwikG04sRwaF2JnmtKFMJKbzw0LQQc2RPqzFBO1l77N2kG-8aAdm9eaYu3-IpHdRK0i-_6JksvySXnYMKkpA33FZZqBY2EjViaPyqeMxyx-Vm5Q8x5F3QSwBo1o3hv2CgHNt1Mf2FBAZd32Ub_42AG0GvQnP-MvkGhNNYRvoEkb7rs2T0lYkeEpdPVWy5WA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white text-xs font-medium bg-white/20 backdrop-blur-md px-3 py-1 rounded-full">Modified 1d ago</span>
+</div>
+</div>
+<div class="p-5">
+<h5 class="font-manrope font-bold text-primary mb-1">Industrial Loft NYC</h5>
+<p class="text-xs text-on-surface-variant">Interior • 1,800 sq ft</p>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden group cursor-pointer transition-transform hover:-translate-y-1">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Mountain Retreat" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern mountain cabin architectural render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsAa4pNAg9MR1yCzV6OAjN48Ub4Cn3dXKcrJi1FW-ES2t4AgBhMaaZTEfPrbb62SFOCVCSVXwTpdgcoIEIOuBt-WIvyhC5TuzxRtr7GHcirIi1_AUyeWctQZjoOI_pJqlUG46eHecjSfWgpcWC7FI1BZfEc1WXrjnmD3gh8_q02CaRiUAChToGR94o33Zy_VHX1EYWgXC3AEMx_o8IJbbDdb1lbP2IpYvA_ZmDB3i2-8VFtm3wPXwdfg4PtmozY9Atkzl5Pyvwiw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white text-xs font-medium bg-white/20 backdrop-blur-md px-3 py-1 rounded-full">Modified 3d ago</span>
+                                00</div>
+</div>
+<div class="p-5">
+<h5 class="font-manrope font-bold text-primary mb-1">Aspen Retreat</h5>
+<p class="text-xs text-on-surface-variant">Residential • 3,100 sq ft</p>
+</div>
+</div>
+<!-- Project Card 4 (Add New Placeholder) -->
+<div class="bg-surface-container-low border-2 border-dashed border-outline-variant/30 rounded-2xl flex flex-col items-center justify-center p-8 group cursor-pointer hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-outline mb-4 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">add</span>
+</div>
+<p class="font-manrope font-bold text-primary">New Project</p>
+<p class="text-xs text-on-surface-variant mt-1 text-center">Start from blank canvas</p>
+</div>
+</div>
+</div>
+<!-- Stats / AI Insights -->
+<div class="md:col-span-12 lg:col-span-12 mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="bg-surface-container rounded-2xl p-6 flex items-center gap-5">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div>
+<p class="text-2xl font-manrope font-bold text-primary">124</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">AI Generations</p>
+</div>
+</div>
+<div class="bg-surface-container rounded-2xl p-6 flex items-center gap-5">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-2xl font-manrope font-bold text-primary">48h</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Render Time Saved</p>
+</div>
+</div>
+<div class="bg-tertiary-fixed rounded-2xl p-6 flex items-center gap-5">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/10 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<div>
+<p class="text-2xl font-manrope font-bold text-primary">98%</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Quality Score</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Shared Component - Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-safe px-4 bg-white/40 dark:bg-[#191c1d]/40 backdrop-blur-xl rounded-t-[2rem] border-t-[0.5px] border-[#bfc8c9]/15 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] h-20">
+<a class="flex flex-col items-center justify-center bg-[#00353a] text-white rounded-2xl p-3 mb-2 scale-110 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5c6061] dark:text-[#bfc8c9] p-3 transition-transform duration-300 ease-out hover:opacity-80" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5c6061] dark:text-[#bfc8c9] p-3 transition-transform duration-300 ease-out hover:opacity-80" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">AI</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5c6061] dark:text-[#bfc8c9] p-3 transition-transform duration-300 ease-out hover:opacity-80" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5c6061] dark:text-[#bfc8c9] p-3 transition-transform duration-300 ease-out hover:opacity-80" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
