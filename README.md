@@ -195,7 +195,7 @@ Body:
 
 ## 👨‍💻 Author
 
-**Anirban Mandal**
+**Anirban Mandal and Anirban Pal**
 
 ---
 
